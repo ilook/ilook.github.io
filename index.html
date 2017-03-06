@@ -1,1 +1,22 @@
-"Hello World" 
+<script>
+function test() {
+  let filters = [];
+
+ 
+  filters.push({services: ["battery_service"]});
+  
+  let options = {};
+  options.filters = filters;
+  
+  navigator.bluetooth.requestDevice(options)
+  .then(device => {
+    alert('> Name:             ' + device.name);
+    alert('> Id:               ' + device.id);
+    alert('> Connected:        ' + device.gatt.connected);
+  })
+  .catch(error => {
+    alert('Argh! ' + error);
+  });
+}
+</script>
+<button onclick="test()">click</button>
