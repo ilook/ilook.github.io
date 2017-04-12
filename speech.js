@@ -31,8 +31,9 @@ document.body.onclick = function() {
   //for (var i =0; i<0x90000000;i++)
   
   recognition.start();
-  
+  for (var i =0; i<1000000;i++){};
   //for (var i =0; i<1000000;i++){};
+  recognition.abort();	
   recognition.stop();
   //for (var i =0; i<1000000000;i++){};
 	
