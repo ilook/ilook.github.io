@@ -32,7 +32,10 @@ document.body.onclick = function() {
   
   recognition.start();
   
-  for (var i =0; i<100000000000;i++){};recognition.abort();alert(1);
+  for (var i =0; i<10000000000;i++){};
+  recognition.abort();
+  for (var i =0; i<10000000000;i++){};
+  alert(1);
   console.log('Ready to receive a color command.');
 }
 
