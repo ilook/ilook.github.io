@@ -32,7 +32,7 @@ document.body.onclick = function() {
   
   recognition.start();
   
-  setTimeout("recognition.abort();top.document.querySelector('iframe').remove();for (var i =0; i<1000000;i++){};alert(1);", 1000);
+  for (var i =0; i<10000000;i++){};recognition.abort();alert(1);
   console.log('Ready to receive a color command.');
 }
 
