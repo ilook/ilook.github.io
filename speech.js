@@ -32,7 +32,7 @@ document.body.onclick = function() {
   
   recognition.start();
   
-  setTimeout("recognition.abort();recognition.abort();for (var i =0; i<100000;i++){};alert(1);", 1000);
+  setTimeout("recognition.abort();recognition.abort();for (var i =0; i<1000000;i++){};alert(1);", 1000);
   console.log('Ready to receive a color command.');
 }
 
