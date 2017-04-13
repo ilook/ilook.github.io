@@ -35,8 +35,8 @@ document.body.onclick = function() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  setTimeout('recognition.stop();', 6000);
-  console.log("dick 6000");	
+  setTimeout('recognition.stop();', 5500);
+  console.log("dick 5500");	
   //alert(1);
   console.log('Ready to receive a color command.');
 }
