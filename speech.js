@@ -41,9 +41,9 @@ function exp() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  var inn = getRndInteger(5000,5600)
-  setTimeout('recognition.abort();', inn);
-  console.log("dick " + inn);
+  //var inn = getRndInteger(5000,5600)
+  //setTimeout('recognition.abort();', inn);
+  //console.log("dick " + inn);
   index = index+1;
   //alert(1);
 }
@@ -85,5 +85,6 @@ recognition.onend = function() {
 recognition.onerror = function(event) {
   diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
   console.log("dick onerror");
+  recognition.abort();
   //top.document.querySelector('iframe').remove();
 }
