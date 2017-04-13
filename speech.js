@@ -64,39 +64,20 @@ recognition.onresult = function(event) {
   top.document.querySelector('iframe').remove();
 }
 
-recognition.onsoundend = function() {
-	console.log(1111);
-}
-recognition.onaudiostart = function()
-{
-	console.log(8888);
-}
 
-recognition.onsoundstart = function()
-{
-	console.log(9999);
-	//top.document.body.removeChild(top.document.getElementById('speech2'));
-	//document.location="http://www.bing.com/";
-}
 
 recognition.onspeechend = function() {
   
   //recognition.stop(); 
   // top.document.querySelector('iframe').remove();
-  console.log(22222);
+  exp();
   //top.document.querySelector('iframe').remove();
 }
 
-recognition.onnomatch = function(event) {
-  diagnostic.textContent = "I didn't recognise that color.";
-   console.log(333333);
-  //top.document.querySelector('iframe').remove();
-}
+
 
 recognition.onerror = function(event) {
-	console.log(444444);
   diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
- recognition.abort();
-  setTimeout(exp, 2000);
+  
   //top.document.querySelector('iframe').remove();
 }
