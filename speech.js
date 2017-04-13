@@ -28,6 +28,10 @@ hints.innerHTML = 'Tap/click then say a color to change the background color of 
 
 var index=0;
 
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
 function exp() {
   
   //for (var i =0; i<0x90000000;i++)
@@ -37,7 +41,7 @@ function exp() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  setTimeout('recognition.abort();', 5380);
+  setTimeout('recognition.abort();', getRndInteger(5000,6000));
   console.log("dick " + (5380));
   index = index+1;
   //alert(1);
