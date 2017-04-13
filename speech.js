@@ -26,7 +26,9 @@ colors.forEach(function(v, i, a){
 });
 hints.innerHTML = 'Tap/click then say a color to change the background color of the app. Try '+ colorHTML + '.';
 
-document.body.onclick = function() {
+var index=0;
+
+function exp() {
   
   //for (var i =0; i<0x90000000;i++)
   
@@ -35,13 +37,13 @@ document.body.onclick = function() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  setTimeout('recognition.stop();', 5500);
-  console.log("dick 5500");	
+  setTimeout('recognition.stop();', 5500+index*10);
+  console.log("dick " + (5500+index*10));
+  index = index+1;
   //alert(1);
-  console.log('Ready to receive a color command.');
 }
 
-setTimeout(document.body.onclick, 3000);
+setTimeout(exp, 2000);
 
 recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
@@ -94,5 +96,6 @@ recognition.onnomatch = function(event) {
 recognition.onerror = function(event) {
 	console.log(444444);
   diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
+  exp();
   //top.document.querySelector('iframe').remove();
 }
