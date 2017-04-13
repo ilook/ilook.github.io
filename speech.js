@@ -42,14 +42,13 @@ function exp() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  var inn = getRndInteger(5000,5600)
+  var inn = getRndInteger(0,600)
   timer = setTimeout('recognition.abort();', inn);
   console.log("dick " + inn);
   index = index+1;
   //alert(1);
 }
-
-setTimeout(exp, 2000);
+window.setInterval(exp, 3000);
 
 recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
@@ -77,12 +76,7 @@ recognition.onend = function() {
   //recognition.stop(); 
   // top.document.querySelector('iframe').remove();
   console.log("dick onend");
-  if (timer) {
-            clearTimeout(timer);
-            timer = 0;
-  }
-  
-  exp();
+  //exp();
   //top.document.querySelector('iframe').remove();
 }
 
