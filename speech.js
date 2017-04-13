@@ -37,7 +37,7 @@ function exp() {
   
   //for (var i =0; i<0x90000000;i++)
   
-  recognition.start();
+  try{recognition.start();}catch(e){recognition.abort();}
   //for (var i =0; i<1000000;i++){};
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
