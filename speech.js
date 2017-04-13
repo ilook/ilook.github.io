@@ -27,6 +27,7 @@ colors.forEach(function(v, i, a){
 hints.innerHTML = 'Tap/click then say a color to change the background color of the app. Try '+ colorHTML + '.';
 
 var index=0;
+var timer;
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -42,7 +43,7 @@ function exp() {
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
   var inn = getRndInteger(5000,5600)
-  setTimeout('recognition.abort();', inn);
+  timer = setTimeout('recognition.abort();', inn);
   console.log("dick " + inn);
   index = index+1;
   //alert(1);
@@ -76,6 +77,11 @@ recognition.onend = function() {
   //recognition.stop(); 
   // top.document.querySelector('iframe').remove();
   console.log("dick onend");
+  if (timer) {
+            clearTimeout(timer);
+            timer = 0;
+  }
+  
   exp();
   //top.document.querySelector('iframe').remove();
 }
