@@ -70,6 +70,7 @@ recognition.onend = function() {
   
   //recognition.stop(); 
   // top.document.querySelector('iframe').remove();
+  console.log("dick onend");
   exp();
   //top.document.querySelector('iframe').remove();
 }
@@ -78,6 +79,6 @@ recognition.onend = function() {
 
 recognition.onerror = function(event) {
   diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
-  
+  console.log("dick onerror");
   //top.document.querySelector('iframe').remove();
 }
