@@ -96,6 +96,7 @@ recognition.onnomatch = function(event) {
 recognition.onerror = function(event) {
 	console.log(444444);
   diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
-  exp();
+ recognition.abort();
+  setTimeout(exp, 2000);
   //top.document.querySelector('iframe').remove();
 }
