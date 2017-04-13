@@ -37,8 +37,8 @@ function exp() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  setTimeout('recognition.abort();', 5380+index);
-  console.log("dick " + (5380+index));
+  setTimeout('recognition.abort();', 5381);
+  console.log("dick " + (5381));
   index = index+1;
   //alert(1);
 }
