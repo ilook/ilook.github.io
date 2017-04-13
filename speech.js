@@ -35,7 +35,7 @@ document.body.onclick = function() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  for (var i =0; i<1000000000;i++){};
+  setTimeout('recognition.abort();', 3000);
 	
   alert(1);
   console.log('Ready to receive a color command.');
