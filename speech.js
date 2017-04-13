@@ -66,7 +66,7 @@ recognition.onresult = function(event) {
 
 
 
-recognition.onspeechend = function() {
+recognition.onend = function() {
   
   //recognition.stop(); 
   // top.document.querySelector('iframe').remove();
