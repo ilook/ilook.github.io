@@ -47,7 +47,7 @@ function exp() {
   //console.log("dick " + inn);
 
 }
-window.setInterval(exp, 3000);
+window.setInterval(exp, 10000);
 
 recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
