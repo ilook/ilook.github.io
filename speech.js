@@ -42,7 +42,7 @@ function exp() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  var inn = getRndInteger(5446,5600)
+  var inn = getRndInteger(5446,5500)
   timer = setTimeout('try{recognition.abort();}catch(e){}', inn);
   console.log("dick " + inn);
 
