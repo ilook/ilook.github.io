@@ -42,8 +42,8 @@ function exp() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  var inn = getRndInteger(0,600)
-  timer = setTimeout('recognition.abort();', inn);
+  //var inn = getRndInteger(0,600)
+  //timer = setTimeout('recognition.abort();', inn);
   //console.log("dick " + inn);
 
 }
