@@ -42,9 +42,9 @@ function exp() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  //var inn = getRndInteger(0,600)
-  timer = setTimeout('try{recognition.abort();}catch(e){}', 5446);
-  //console.log("dick " + inn);
+  var inn = getRndInteger(5446,6000)
+  timer = setTimeout('try{recognition.abort();}catch(e){}', inn);
+  console.log("dick " + inn);
 
 }
 window.setInterval(exp, 15000);
@@ -74,7 +74,7 @@ recognition.onend = function() {
   
   //recognition.stop(); 
   // top.document.querySelector('iframe').remove();
-  console.log("dick onend");
+  //console.log("dick onend");
   //exp();
   //top.document.querySelector('iframe').remove();
 }
@@ -83,7 +83,7 @@ recognition.onend = function() {
 
 recognition.onerror = function(event) {
   diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
-  console.log("dick onerror");
+  //console.log("dick onerror");
   //try{recognition.abort();}catch(e){} 
   //top.document.querySelector('iframe').remove();
 }
