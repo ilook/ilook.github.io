@@ -85,11 +85,11 @@ function exp() {
 function init()
 {
   var button = document.getElementById('2');
-  button.addEventListener('click ', function(event) {
+  button.addEventListener('click', function(event) {
   blockuiwithb();});
     
   button = document.getElementById('1');
-  button.addEventListener('click ', function(event) {
+  button.addEventListener('click', function(event) {
   exp();  });
 }
 window.setTimeout(init, 3000);
