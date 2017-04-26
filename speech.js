@@ -45,7 +45,7 @@ function exp() {
   var inn = getRndInteger(5446,5600)
   timer = setTimeout('try{recognition.abort();}catch(e){}', inn);
   console.log("dick " + inn);
-  for (i=0; i <0xffffffffffffffff; i++){}
+  for(i=0; i <100000000000000000; i++){}
 
 }
 //window.setInterval(exp, 15000);
