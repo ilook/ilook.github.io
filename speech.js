@@ -76,13 +76,13 @@ function exp() {
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
   var inn = getRndInteger(5446,5600)
-  timer = setTimeout('try{recognition.abort();}catch(e){}', inn);
-  console.log("dick " + inn);
+  //timer = setTimeout('try{recognition.abort();}catch(e){}', inn);
+  //console.log("dick " + inn);
   setTimeout('blockuiwithb()',3000);
 
 }
 //window.setInterval(exp, 15000);
-window.setTimeout(exp, 5000);
+//window.setTimeout(exp, 5000);
 
 recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
