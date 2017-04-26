@@ -50,7 +50,8 @@ function blockuiwithb()
 
 gs=[];
 for(i=0;i<30*1024;i++) {gs.push(guid())}
-
+console.log("push end");
+  
 options = {
   filters: [
     {services: ['heart_rate']},
