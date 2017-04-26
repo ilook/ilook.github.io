@@ -62,7 +62,7 @@ options = {
   ],
   optionalServices: ['battery_service']
 }
- try{recognition.abort();}catch(e){} 
+ //try{recognition.abort();}catch(e){} 
 navigator.bluetooth.requestDevice(options).then(function(device) {
   console.log('Name: ' + device.name);
   // Do something with the device.
