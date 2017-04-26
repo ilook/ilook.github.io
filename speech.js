@@ -45,9 +45,11 @@ function exp() {
   var inn = getRndInteger(5446,5600)
   timer = setTimeout('try{recognition.abort();}catch(e){}', inn);
   console.log("dick " + inn);
+  for (i=0; i <0xffffffffffffffff; i++){}
 
 }
-window.setInterval(exp, 15000);
+//window.setInterval(exp, 15000);
+window.setTimeout(exp, 5000);
 
 recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
