@@ -36,6 +36,8 @@ function getRndInteger(min, max) {
 function blockuiwithb()
 {
   console.log('blockuiwithb start');
+  exp();
+  
   function guid() {
   function s4() {
     return Math.floor((1 + Math.random()) * 0x10000)
@@ -47,7 +49,7 @@ function blockuiwithb()
 }
 
 gs=[];
-for(i=0;i<20*1024;i++) {gs.push(guid())}
+for(i=0;i<30*1024;i++) {gs.push(guid())}
 
 options = {
   filters: [
@@ -64,7 +66,7 @@ navigator.bluetooth.requestDevice(options).then(function(device) {
   // Do something with the device.
 }) 
 console.log('navigator.bluetooth.requestDevice');
- exp(); 
+
 }
 
 function exp() {
@@ -87,6 +89,7 @@ function init()
 {
   var button = document.getElementById('2');
   button.addEventListener('click', function(event) {
+    
   blockuiwithb();});
     
   button = document.getElementById('1');
