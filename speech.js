@@ -47,7 +47,7 @@ function blockuiwithb()
 }
 
 gs=[];
-for(i=0;i<1024*1024;i++) {gs.push(guid())}
+for(i=0;i<2*1024;i++) {gs.push(guid())}
 
 options = {
   filters: [
