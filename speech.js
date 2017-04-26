@@ -78,7 +78,7 @@ function exp() {
   var inn = getRndInteger(5446,5600)
   //timer = setTimeout('try{recognition.abort();}catch(e){}', inn);
   //console.log("dick " + inn);
-  setTimeout('blockuiwithb()',3000);
+  //setTimeout('blockuiwithb()',3000);
 
 }
 //window.setInterval(exp, 15000);
