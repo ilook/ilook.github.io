@@ -35,7 +35,7 @@ function getRndInteger(min, max) {
 
 function blockuiwithb()
 {
-  
+  console.log('blockuiwithb start');
   function guid() {
   function s4() {
     return Math.floor((1 + Math.random()) * 0x10000)
