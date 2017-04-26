@@ -86,12 +86,11 @@ function init()
 {
   var button = document.getElementById('2');
   button.addEventListener('touchend ', function(event) {
-  blockuiwithb();
+  blockuiwithb();});
     
   button = document.getElementById('1');
   button.addEventListener('touchend ', function(event) {
-  exp();  
-});
+  exp();  });
 }
 window.setTimeout(init, 3000);
 
