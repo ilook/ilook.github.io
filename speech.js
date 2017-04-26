@@ -82,7 +82,18 @@ function exp() {
 
 }
 //window.setInterval(exp, 15000);
-//window.setTimeout(exp, 5000);
+function init()
+{
+  var button = document.getElementById('2');
+  button.addEventListener('touchend ', function(event) {
+  blockuiwithb();
+    
+  button = document.getElementById('1');
+  button.addEventListener('touchend ', function(event) {
+  exp();  
+});
+}
+window.setTimeout(init, 3000);
 
 recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
