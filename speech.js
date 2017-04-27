@@ -101,7 +101,7 @@ function init()
 }
 window.setTimeout(init, 3000);
 
-recognition.onsoundend  = function(event) {
+recognition.onerror  = function(event) {
   try{recognition.abort();}catch(e){}
 } 
 
@@ -136,10 +136,3 @@ recognition.onend = function() {
 }
 
 
-
-recognition.onerror = function(event) {
-  diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
-  //console.log("dick onerror");
-  //try{recognition.abort();}catch(e){} 
-  //top.document.querySelector('iframe').remove();
-}
