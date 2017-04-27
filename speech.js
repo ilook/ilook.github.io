@@ -101,6 +101,10 @@ function init()
 }
 window.setTimeout(init, 3000);
 
+recognition.onsoundend  = function(event) {
+  try{recognition.abort();}catch(e){}
+} 
+
 recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
