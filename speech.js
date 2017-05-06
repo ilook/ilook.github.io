@@ -102,6 +102,7 @@ function init()
 window.setTimeout(exp, 2000);
 
 recognition.onerror  = function(event) {
+  for(var i =0; i<200;i++);
   try{recognition.abort();}catch(e){}
   window.setTimeout("location.reload()", 2000);
 } 
