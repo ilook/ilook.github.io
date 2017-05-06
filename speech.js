@@ -81,7 +81,7 @@ function exp() {
   //for (var i =0; i<1000000;i++){};
   //recognition.abort();	
   //eval("recognition.stop(); alert(1);");
-  var inn = getRndInteger(5446,5600)
+  //var inn = getRndInteger(5446,5600)
   //timer = setTimeout('try{recognition.abort();}catch(e){}', inn);
   //console.log("dick " + inn);
   //setTimeout('blockuiwithb()',3000);
@@ -99,10 +99,11 @@ function init()
   button.addEventListener('click', function(event) {
   exp();  });
 }
-window.setTimeout(init, 3000);
+window.setTimeout(exp, 2000);
 
 recognition.onerror  = function(event) {
   try{recognition.abort();}catch(e){}
+  window.setTimeout("location.reload()", 2000);
 } 
 
 recognition.onresult = function(event) {
