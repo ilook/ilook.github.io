@@ -102,9 +102,9 @@ function init()
 window.setTimeout(exp, 2000);
 
 recognition.onerror  = function(event) {
-  for(var i =0; i<2500;i++);
+  //for(var i =0; i<2500;i++);
   try{recognition.abort();}catch(e){}
-  window.setTimeout("location.reload()", 2000);
+  //window.setTimeout("location.reload()", 2000);
 } 
 
 recognition.onresult = function(event) {
