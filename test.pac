@@ -1,5 +1,6 @@
 function FindProxyForURL(url, host)
 {
+   return "DIRECT";
    if (isInNet(host, "192.168.0.0",  "255.0.0.0"))
     {
         return "DIRECT";
